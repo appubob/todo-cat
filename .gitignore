@@ -19,7 +19,7 @@ out/
 *.local
 
 # --- Prisma ---
-generated/prisma/
+**/generated/
 node_modules/.prisma/
 
 # --- Editor & OS Files ---
