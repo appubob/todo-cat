@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+@theme {
+    /* COLORS */
+
+    /* Global colors */
+    --color-borders-alt-cta-text: #000000;
+    --color-bg-2-cta-text: #FAFAFA;
+
+    /* Background colors */
+    --color-bg-1-default: #F1EDFF;
+    --color-bg-1-green: #EDFFED;
+
+    /* Accent 1 colors */
+    --color-a-1-default: #3300FF;
+    --color-a-1-green: #2FFF2F;
+
+    /* Accent 2 colors */
+    --color-a-2-default: #E3DBFF;
+    --color-a-2-green: #DBFFDB;
+}
