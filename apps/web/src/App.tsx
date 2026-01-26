@@ -1,5 +1,3 @@
-import './App.css'
-
 import {Routes, Route} from "react-router-dom";
 
 import HomePage from "./pages/homePage.tsx";
@@ -7,11 +5,14 @@ import AccountPage from "./pages/accountPage.tsx";
 import TaskPage from "./pages/taskPage.tsx";
 import AccountCreationPage from "./pages/accountCreationPage.tsx";
 
+import Navbar from './components/navbar.tsx';
+
 function App() {
 
   return (
     <>
       <div className="App">
+        <Navbar coinAmount={1000} />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/account" element={<AccountPage />} />

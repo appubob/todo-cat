@@ -1,11 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
 @import "tailwindcss";
 
 @theme {
     /* COLORS */
 
     /* Global colors */
-    --color-borders-alt-cta-text: #000000;
-    --color-bg-2-cta-text: #FAFAFA;
+    --color-bg-2: #FAFAFA;
 
     /* Background colors */
     --color-bg-1-default: #F1EDFF;
@@ -17,5 +17,52 @@
 
     /* Accent 2 colors */
     --color-a-2-default: #E3DBFF;
-    --color-a-2-green: #DBFFDB;
+    --color-a-2-green: #CFFFCF;
+
+    /* TYPOGRAPHY */
+
+    --font-afacad: "Afacad", sans-serif;
+
+    /* Mobile */
+    --text-p-m: 19px;
+    --text-h2-m: 26px;
+    --text-h1-m: 42px;
+
+    /* Desktop */
+    --text-p-d: 22px;
+    --text-h2-d: 31px;
+    --text-h1-d: 49px;
+
+    /* CONTAINER */
+
+    --radius-container: 11px;
+    --spacing-container-pad: 22px;
+    --border-container: 2px solid var(--color-black);
+    --shadow-container: 4px 4px 0px 0px var(--color-black);
+
+    --global-padding: 22px 11px;
+}
+
+@layer base {
+    body {
+        @apply font-afacad text-p-m lg:text-p-d text-black bg-bg-1-default;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    #root {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 22px 11px;
+    }
+
+    h1 { @apply text-h1-m lg:text-h1-d font-semibold; }
+    h2 { @apply text-h2-m lg:text-h2-d font-semibold; }
+}
+
+@layer components {
+  .custom-container {
+    @apply bg-bg-2 rounded-container p-container-pad;
+    border: 2px solid var(--color-black);
+  }
 }
