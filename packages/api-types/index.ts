@@ -2,6 +2,8 @@
 export interface User {
   id: string;
   username: string;
+  email: string;
+  passwordHash: string;
   coins: number;
   backgroundColorId: string;
   hatId: string | null;
@@ -12,10 +14,10 @@ export interface User {
 export interface Task {
   id: string;
   userId: string;
-  title: string;       // Decrypted on the fly by Backend
-  description: string; // Decrypted on the fly by Backend
+  title: string;
+  description: string;
   value: number;
-  deadline: string;    // ISO Date string
+  deadline: string;
   isRecurring: boolean;
 }
 

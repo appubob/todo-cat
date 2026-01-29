@@ -16,6 +16,8 @@ datasource db {
 model User {
   id                String @id @default(uuid())
   username          String @unique
+  email             String @unique
+  passwordHash      String
   coins             Int    @default(0)
   backgroundColorId String   
   hatId             String?
